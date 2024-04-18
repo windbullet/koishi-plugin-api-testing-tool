@@ -260,11 +260,10 @@
           resType.value = '4'
           result.value = result.value = URL.createObjectURL(response.data)
         } else {
+          resType.value = '1'
           if (response.data.type === 'application/json') {
-            resType.value = '1'
             result.value = JSON.stringify(JSON.parse(await response.data.text()), null, 2)
           } else {
-            resType.value = '1'
             result.value = await response.data.text()
           }
         }
@@ -296,15 +295,14 @@
     headersRows.value.push({name: '', value: ''})
   }
   function setContentType() {
+    let index = headersRows.value.findIndex(header => header.name.toLowerCase() === 'content-type')
     if (['POST', 'PUT', 'PATCH'].includes(method.value)) { 
-      let index = headersRows.value.findIndex(header => header.name.toLowerCase() === 'content-type')
       if (index < 0) {
         headersRows.value.unshift({name: 'content-type', value: contentType.value})
       } else {
         headersRows.value[index].value = contentType.value
       }
     } else {
-      let index = headersRows.value.findIndex(header => header.name.toLowerCase() === 'content-type')
       if (index >= 0) {
         headersRows.value.splice(index, 1)
       }
