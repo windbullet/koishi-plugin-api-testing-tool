@@ -170,14 +170,12 @@
       </label>
 
     </div>
-    <h1>{{ debug }}</h1>
   </k-layout>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue'
   import axios from 'axios'
-  let debug = ref("111")
   let url = ref('http://')
   let result = ref('')
   let method = ref('GET')
