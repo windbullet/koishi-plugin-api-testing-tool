@@ -230,7 +230,7 @@
       responseType: 'blob'
     } as const
 
-    if (method.value === 'POST') {
+    if (["POST", "PUT", "PATCH"].includes(method.value)) {
       let data = {}
       for (let body of bodyRows.value) {
         if (body.name && body.value) {

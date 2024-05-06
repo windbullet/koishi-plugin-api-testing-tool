@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-api-testing-tool",
   "description": "api接口测试工具（控制台扩展）",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -23,11 +23,11 @@
     "axios": "^1.6.8"
   },
   "peerDependencies": {
-    "@koishijs/plugin-console": "^5.28.3",
+    "@koishijs/plugin-console": "^5.28.4",
     "koishi": "^4.17.4"
   },
   "devDependencies": {
-    "@koishijs/client": "^5.28.3",
+    "@koishijs/client": "^5.28.4",
     "daisyui": "^4.10.2",
     "tailwindcss": "^4.0.0-alpha.14"
   }
